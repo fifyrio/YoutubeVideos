@@ -11,7 +11,8 @@ import MeComponents
 import Env
 
 public struct RootView: View {
-    @EnvironmentObject private var routerPath: RouterPath
+    @StateObject private var routerPath = RouterPath()
+
     public init() {
     }
     
@@ -20,6 +21,7 @@ public struct RootView: View {
             HomeTab()
             MeTab()
         }
+        .environmentObject(routerPath)
     }
 }
 

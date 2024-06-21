@@ -6,18 +6,16 @@
 //
 
 import SwiftUI
-import Env
 import Root
 
 @main
 struct SwiftUIDemoApp: App {
     
-    @StateObject private var routerPath = RouterPath()
+    
     
     var body: some Scene {
         WindowGroup {
-            RootView()            
-                .environmentObject(routerPath)
+            RootView()                            
         }
     }
 }
